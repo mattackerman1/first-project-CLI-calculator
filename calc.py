@@ -7,8 +7,11 @@ def usage():
     sys.exit(1)
 
 def main():
+    if len(sys.argv) == 2 and sys.argv[1] in ("-h", "--help"):
+        usage()
     if len(sys.argv) != 4:
         usage()
+
 
     op = sys.argv[1]
     try:
